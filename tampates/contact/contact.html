@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>contact us </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static ' home/css/Style.css' % }">
+
+</head>
+<body class="feed-back">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Lam’s coffee</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+
+<div class="main-container">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <p> leave  a message for us .. </p>
+    </div>
+  <div class="row">
+    <div class="column">
+      <img src="{% static 'home/image/fed.jpg' %}" style="width:80%" class="h">
+    </div>
+    <div class="column">
+      <form id="fo" action="{% url 'contact' %}" method="POST" > 
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Email</label>
+        <input type="text" id="lname" name="email" placeholder="Your Email..">
+        <label>subject</label>
+        <input Name="subject" maxlength="150">
+        <label>text</label>
+        <textarea Name="text"placeholder='what do you want us know ' maxlength="150"></textarea>
+
+        <input class="job-submit" type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+<!--end contact-->
+</body>
+</html>
+
+{% endblock %}

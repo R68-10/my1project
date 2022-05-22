@@ -1,0 +1,97 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static ' home/css/Style.css' % }" type="text/css">
+
+</head>
+<body> 
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">Lam’s coffee</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <div class="navbar-nav">
+            <a class="nav-link"  href="{% url 'home' %}">Home</a>
+            <a class="nav-link" href="{% url 'menu' %}">menu</a>
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+          
+		  </div>
+		</div>
+	</nav>
+<br>
+<h1 class="text-white text-center font-italic" id="pn"><big>Lam’s coffee</big></h1>
+<br>
+<!-----slidshow FROM WWW.W3SCHOOL.COM BUT WE MAKE SOME CHANGES-->
+<div class="slideshow-container">
+      
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="{% static 'home/image/s3.jpg' %}" style="width:95%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="{% static 'home/image/s4.jpg' %}" style="width:95%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="{% static 'home/image/s5.jpg' %}" style="width:95%">
+  </div>
+  
+  </div>
+  <br>
+
+
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+<script src="{% static 'home/js/jquery_3.4.1.min.js' %}"></script>
+  <script src="{% static 'home/js/popper.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+  
+  <br>
+
+</body>
+</html>
+
+{% endblock %}

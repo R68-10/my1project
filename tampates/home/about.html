@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static ' home/css/Style.css' % }">
+
+  <section id="about-section">
+    <!-- about left  -->
+    <div class="about-left">
+        <img src="{%static 'home/image/coffee-shop.jpg'%}" width="350px" />
+    </div>
+
+    <!-- about right  -->
+    <div class="about-right">
+            
+           
+              
+      <h1>About us</h1>
+        <p>
+          Taste and See Coffee Shop and Gallery offers a unique coffee house environment unlike any other in Macon. We are not only a place to drop 
+          in and get your morning cup of coffee (although you are more than welcome to do that), we are a place where you can sit down and enjoy that tailor-made cup of coffee. If you need to work,
+           we have a seating area created specifically for you. 
+        </p>
+      
+       
+    </div>
+</section>
+
+
+
+    {% endblock %}

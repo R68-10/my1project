@@ -1,0 +1,65 @@
+<!--start footer-->
+{% load static %}
+{% block content %}
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset = 'utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static ' home/css/Style.css' % }" type="text/css">
+    
+<div class="footer">
+    <div class="">
+      <p>Lam’s coffee</p>
+      <div class="social-icons">
+        <a href="https://www.twitter.com/" target="_blank"><i class="{% static 'home/image/TWITTER.jpg' %}"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="{% static 'home/image/INST.jpg' %}"></i></a>
+ 
+      </div>
+
+      <p class="copyright">&copy;2022 all right reserved</p>
+    </div>
+  </div>
+
+  
+</head>
+<body> 
+  <!--end footer-->
+  <script src="{% static 'home/js/jquery_3.4.1.min.js' %}"></script>
+  <script src="{% static 'home/js/popper.min.js' %}"></script>
+  <script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+  
+    <!--BUTTON TO TOP OF PAGE FROM WWW.W3SCHOOL.COM BUT i MAKE SOME CHANGES-->
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">to up &#9757;</button>
+  
+    <script>
+    // the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px fof the page , show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button  will go the top of the page
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+    
+  </body>
+  </html>
+  {% endblock %}

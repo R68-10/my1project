@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'home/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'home/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" href="{% static ' home/css/Style.css' % }">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Lam’s coffee</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="container bg-white mune-container">
+            <div class="card-columns">
+              <div class="card">
+                <div class="card-img-top muneImg" style= "background-image: url('/static/home/image/SW.jpg')" ></div>
+                <div class="card-body">
+                  <h4 class="card-title">Sweet</h4>
+                  <p class="card-text">Some text about sweet</p>
+                  <a href=""  class="btn btn-success stretched-link">Go to sweet page ..</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-img-top muneImg" style= "background-image: url('/static/home/image/coffe3.jpg')"></div>
+                <div class="card-body">
+                  <h4 class="card-title">Coffee</h4>
+                  <p class="card-text">Some text about coffee</p>
+                  <a href="" class="btn btn-success stretched-link">Go to coffee page ..</a>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-img-top muneImg" style="background-image: url('/static/home/image/BAK.jpg')"></div>
+                <div class="card-body">
+                  <h4 class="card-title">Bakery</h4>
+                  <p class="card-text">Some text about bakery</p>
+                  <a href=""  class="btn btn-success stretched-link">Go to Bakery page ..</a>
+                </div>
+              </div>      
+              <div class="card">
+                <div class="card-img-top muneImg" style="background-image: url('/static/home/image/tea.jpg')"></div>
+                <div class="card-body">
+                  <h4 class="card-title">Tea</h4>
+                  <p class="card-text">Some text about tea</p>
+                  <a href=""  class="btn btn-success stretched-link">Go to tea page ..</a>
+                </div>
+              </div>    
+            </div>
+          </div>
+
+</body>
+</html>
+
+{% endblock %}
