@@ -34,7 +34,7 @@
       <img src="{% static 'home/image/fed.jpg' %}" style="width:80%" class="h">
     </div>
     <div class="column">
-      <form id="fo" action="{% url 'contact' %}" method="POST" > 
+      <form id="fo" action="{% url 'contact' %}" method="POST" > {% csrf_token %}
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="lname">Email</label>
