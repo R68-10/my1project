@@ -20,13 +20,13 @@ from django.urls import path, include
 urlpatterns = [
     # first argument is the name of the url page
     
-    path('gallery/', include('gallery.urls')),
+    # path('gallery/', include('gallery.urls')),
     # path('app1/', include('app1.urls')),
     # path('hello', include('hello.urls')),
     path('blog/', include('blog.urls')),
-    path('home/', include('home.urls')),         # index page
+    path('', include('home.urls')),         # index page
     # path('menu/', include('menu.urls')),
     path('contact/', include('contact.urls')),
-    path("section2/", include('section2.urls')),
+    # path("section2/", include('section2.urls')),
     path('admin/', admin.site.urls),
 ]
